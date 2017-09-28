@@ -1,0 +1,87 @@
+/* select */
+/* 该样式没有修改完毕,暂不能使用!!!!! */
+
+@abstract u-select{
+    /*变量*/
+    $this = ".u-select";
+    $head = ".u-select__head";
+    $body = ".u-select__body";
+    $bodyList = ".u-select__body-list";
+    $bodyListItem = ".u-select__body-list-item";
+    $inline-block();
+    min-width: 1rem;
+	font-size: $fs-14;
+	color: $color_light_black;
+    #{$head}{
+        position: relative;
+        box-sizing: border-box;
+        padding: 0.1rem 0.3rem 0.1rem 0.1rem;
+        border:1px solid $color_extra_black;
+        text-align: left;
+        cursor: pointer;
+        &:after{
+            content: '';
+            position: absolute;
+            top:50%;
+            right:0.05rem;
+            transform:translateY(-50%);
+            $arrow(4px 4px 0 4px,#666);
+        }
+        $lvha-h({
+            color: #000;
+            &:after{
+                border-top-color: #000;
+            }
+        });
+        &#{$head}--open{
+            &:after{
+                transform: rotate(180deg);
+            }
+        }
+        &#{$head}--disabled{
+			$lvha-h({
+				color: $color_light_black;
+				cursor: not-allowed;
+				&:after{
+					border-top-color: #666;
+				}
+			});
+        }
+    }
+    #{$body}{
+        display: none;
+        box-sizing: border-box;
+        border:1px solid #ddd;
+		border-top: 0;
+        &#{$body}--open{
+            display: block;
+        }
+        #{$bodyListItem}{
+            padding: 10px 30px 10px 10px;
+            cursor: pointer;
+            &:not(:last-child){
+                border-bottom: 1px solid #e7e7e7;
+            }
+			$lvha-h({
+				color: #fff;
+				background-color: #3199ff;
+			});
+			&#{$bodyListItem}--disabled{
+				$lvha-h({
+					color: #666;
+					background-color: #fff;
+					cursor: not-allowed;
+				});
+			}
+            &#{$bodyListItem}--selected{
+                position: relative;
+                background-color: #3199ff;
+				color: #fff;
+                .u-iconfont{
+					margin-left: 15px;
+					font-size: 12px;
+                }
+            }
+        }
+    }
+}

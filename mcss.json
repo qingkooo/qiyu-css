@@ -1,0 +1,7 @@
+{
+  "importCSS":true,
+  "input": "./test",
+  "outport": "./test/css",
+  "format": 3,
+  "exclude": "(\\\\|\\/)_"
+}

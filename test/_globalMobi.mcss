@@ -1,0 +1,38 @@
+/*
+ * 移动设备的公共业务
+ */
+
+/*
+ * =========================================
+ * 布局相关
+ * =========================================
+ */
+
+
+/*
+ * =========================================
+ * 模块相关
+ * =========================================
+ */
+/*
+ * =========================================
+ * 媒体查询:iphone5下适配....
+ * =========================================
+ */
+@media screen and (max-width: 320px) {	//  <=iphone5
+
+}
+@media screen and (min-width: 321px) and (max-width: 375px){ // <=iphone6
+
+}
+@media screen and (min-width: 376px) and (max-width: 414px){ // <=iphone6p
+
+}
+@media screen and (min-width: 415px) {	// >iphone6
+
+}
+
+/*竖屏*/
+@media only screen and (orientation:portrait ) {}
+/*横屏*/
+@media only screen and (orientation:landscape) {}

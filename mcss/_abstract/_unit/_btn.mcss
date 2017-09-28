@@ -1,0 +1,88 @@
+/* web端的按钮 */
+@abstract u-btn{
+    $this = ".u-btn";
+    $inline-block();
+    padding: 0.1rem 0.3rem;
+    vertical-align: middle;
+    background-color: $color_blue;
+    border: 1px solid $color_blue;
+    border-radius: 0.04rem;
+    outline: 0;
+    font-size: 0.16rem;
+    line-height: 1;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 1px 1px adjust_color($color_blue,-10%);
+    text-decoration: none;
+    cursor: pointer;
+    $lvha-h({
+        background-color: l-adjust($color_blue,-5%);
+    });
+    $lvha-a({});
+    &#{$this}--block{
+        display: block;
+    }
+    /* 大小定义 */
+    &#{$this}--xl{
+		padding: 0.2rem 0.5rem;
+	}
+    &#{$this}--lg{
+		padding: 0.15rem 0.4rem;
+	}
+    &#{$this}--sm{
+        padding: 0.05rem 0.2rem;
+    }
+    &#{$this}--xs{
+		padding: 0.03rem 0.16rem;
+	}
+
+    /* 状态定义 */
+    &#{$this}--disabled{
+        cursor: not-allowed;
+		color: $color_ultra_light_black;
+        background-color: $color_extra_light_black;
+		border-color: $color_extra_black;
+    }
+}
+/* mobile端的按钮 */
+@abstract u-btn0{
+	$this = ".u-btn0";
+	$inline-block();
+	padding: 0.1rem 0.3rem;
+	vertical-align: middle;
+	background-color: $color_blue;
+	border: 1px solid $color_blue;
+	border-radius: 0.04rem;
+	outline: 0;
+	font-size: 0.16rem;
+	line-height: 1;
+	text-align: center;
+	color: #fff;
+	text-shadow: 0 1px 1px adjust_color($color_blue,-10%);
+	text-decoration: none;
+	cursor: pointer;
+	&#{$this}--block{
+		display: block;
+	}
+	/* 大小定义 */
+	&#{$this}--xl{
+		padding: 0.2rem 0.5rem;
+	}
+	&#{$this}--lg{
+		padding: 0.15rem 0.4rem;
+	}
+	&#{$this}--sm{
+		padding: 0.05rem 0.2rem;
+	}
+	&#{$this}--xs{
+		padding: 0.03rem 0.16rem;
+	}
+
+	/* 状态定义 */
+	&#{$this}--disabled{
+		cursor: not-allowed;
+		color: $color_ultra_light_black;
+		background-color: $color_extra_light_black;
+		border-color: $color_extra_black;
+	}
+}

@@ -1,0 +1,44 @@
+/*开关*/
+/* 该样式没有修改完毕,暂不能使用!!!!! */
+
+@abstract u-switch{
+    $this = ".u-switch";
+    $item = ".u-switch__item";
+    $clearfix();
+    #{$item}{
+        box-sizing: border-box;
+        float: left;
+        padding:10px 20px;
+        border:1px solid #bfbfbf;
+        font-size: 14px;
+        color: #000;
+        cursor: pointer;
+        &:first-child{
+            border-radius: 6px 0 0 6px;
+            &#{$item}--selected{
+                color: #fff;
+                border-color:#3199ff;
+                background-color: #3199ff;
+                cursor: default;
+            }
+            &#{$item}--disabled{
+                cursor: not-allowed;
+            }
+        }
+        &:last-child{
+            border-radius: 0 6px 6px 0;
+            border-left: 0;
+			&#{$item}--selected{
+                color: #fff;
+                background-color: #3199ff;
+                border-color:#3199ff;
+                cursor: default;
+            }
+			&#{$item}--disabled{
+                cursor: not-allowed;
+            }
+        }
+    }
+
+
+}
