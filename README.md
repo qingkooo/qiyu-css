@@ -1,9 +1,14 @@
 # 说明
 使用mcss预处理器编写的[七鱼客服官网](http://qiyukf.com)公共样式库,故取名: q(iyu)mcss_m(ai)ns(i)t(e);
 
-抽象出的公共方法,不分两端(除非仅针对某一端的方法);
+抽象方法,调用方式:
+```js
+.floatObj{
+    $clearfix();
+}
+```
 
-抽象的类则分为桌面浏览器端和手机端浏览器两套,但均写入模块中(方便调用),比如:
+抽象类分为桌面浏览器端和手机端浏览器两套,调用时以文件名区分:
 ```js
 @extend u-btn;  // 引入桌面端的抽象类
 @extend u-btn0; // 引入手机端的抽象类
@@ -31,6 +36,7 @@ test     (业务样式)
 _config
     |__ _config.mcss    配置变量
     |__ _import.mcss    样式输出 
+    |__ _importMobi.mcss    手机端样式输出
     |__ _reset.mcss     重置样式单
 ```
 
